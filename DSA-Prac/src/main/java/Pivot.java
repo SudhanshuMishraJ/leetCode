@@ -37,7 +37,7 @@ public class Pivot {
                         found = true;
                     }
                 }
-            }
+            }//if no such index is available.
             if(!found)
                 System.out.println("No pivot element");
         }
