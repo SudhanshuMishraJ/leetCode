@@ -9,8 +9,7 @@ public class Pivot {
             System.out.println("Enter length of array:");
             int length = sc.nextInt();
             int []arr = new int[length];
-            int ls = 0, rs = 0;
-            int in = 0;
+            int ls = 0, rs = 0,in = 0;
             boolean found = false;
             //press -12345 to stop entering elements into array
             System.out.println("Enter elements in array:");
