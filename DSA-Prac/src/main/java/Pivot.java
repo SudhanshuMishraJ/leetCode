@@ -11,7 +11,7 @@ public class Pivot {
             int []arr = new int[length];
             int ls = 0, rs = 0,in = 0;
             boolean found = false;
-            //press -12345 to stop entering elements into array
+            //Enter elements into array
             System.out.println("Enter elements in array:");
             while (in<length){
                 arr[in++] = sc.nextInt();
