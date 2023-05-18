@@ -44,18 +44,60 @@ public class CustomLinkedList {
     }
 
     public void displayLinkedList() {
-        ListNode newNode = new ListNode();
         if(head == null){
-            head = newNode;
             System.out.print("List is empty");
         }
         else{
             ListNode currentNode = head;
             while(currentNode.next != null){
-                currentNode = currentNode.next;
                 System.out.print(currentNode.val+" ");
+                currentNode = currentNode.next;
             }
+            System.out.print(currentNode.val+" ");
         }
     }
 
+    public void searchValueInlinkedList(int searchValue) {
+        if(head == null){
+            System.out.print("List is empty. Nothing to search");
+        }
+        else{
+            int index = 1;
+            boolean flag = false;
+            ListNode currentNode = head;
+            while(currentNode.next != null){
+                if(currentNode.val == searchValue) {
+                    System.out.println("Element found " + searchValue + " at index " + (index-1));
+                    flag = true;
+                    break;
+                }
+                currentNode = currentNode.next;
+                index++;
+            }
+            if(currentNode.val == searchValue && !flag) {
+                System.out.println("Element found " + searchValue + " at index " + (index-1));
+                flag = true;
+            }
+            if(!flag)
+                System.out.println("Element "+searchValue+" not found");
+
+        }
+    }
+    public void deleteNodeInlinkedList(int deletionIndex) {
+
+        if(deletionIndex == 0)
+            head = head.getNext();
+        else{
+            ListNode node = head;
+            for (int i = 0; i < deletionIndex - 1; i++) {
+                if(node.getNext() == null) {
+                    System.out.println("Please insert index within the list index range");
+                    return;
+                }
+                node = node.getNext();
+            }
+            node.setNext(node.getNext().getNext() == null ? null : node.getNext().getNext());
+        }
+        displayLinkedList();
+    }
 }

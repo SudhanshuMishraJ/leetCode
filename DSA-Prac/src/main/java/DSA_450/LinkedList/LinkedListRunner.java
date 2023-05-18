@@ -32,11 +32,6 @@ public class LinkedListRunner {
                 int value = sc.nextInt();
                 list.linkedListInsertion(position, value);
             }
-
-            //insertion after a given node
-
-            //searching
-
             //sorting
 
             //deletion of a node
@@ -49,6 +44,19 @@ public class LinkedListRunner {
 
         //Traversal of all the values
         list.displayLinkedList();
+
+        //searching
+        System.out.println("\n Want to search a value in linkedList? Provide the value or press 999 to ignore searching:");
+        int searchValue = sc.nextInt();
+        if(searchValue !=999)
+            list.searchValueInlinkedList(searchValue);
+
+        //deletion of a node
+        System.out.println("Want to delete a node in linkedList? Provide the index value or press 999 to ignore deletion:");
+        int deletionValue = sc.nextInt();
+        if(deletionValue !=999)
+            list.deleteNodeInlinkedList(deletionValue);
+
     }
 
 }
