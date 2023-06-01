@@ -100,4 +100,9 @@ public class CustomLinkedList {
         }
         displayLinkedList();
     }
+
+    public void deleteLinkedList() {
+        this.head = null;
+        displayLinkedList();
+    }
 }

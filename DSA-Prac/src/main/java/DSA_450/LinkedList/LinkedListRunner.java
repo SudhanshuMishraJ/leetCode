@@ -32,12 +32,6 @@ public class LinkedListRunner {
                 int value = sc.nextInt();
                 list.linkedListInsertion(position, value);
             }
-            //sorting
-
-            //deletion of a node
-
-            //deletion of list
-
             System.out.println("Press 99 to exit playing with custom linked list");
             gameValue = sc.nextInt();
         }
@@ -57,6 +51,11 @@ public class LinkedListRunner {
         if(deletionValue !=999)
             list.deleteNodeInlinkedList(deletionValue);
 
+        //deletion of list
+        System.out.println("Press 1 to delete the entire list:");
+        byte wish = sc.nextByte();
+        if(wish == 1)
+            list.deleteLinkedList();
     }
 
 }
